@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+set -o nounset
+
+archive_name=$(date +%Y-%m-%d).tar
+
+. utils
+
+echo Archiving to $ARCHIVE_DIR/$archive_name ...
+mount_sdcard
+tar cf $ARCHIVE_DIR/$archive_name -C $SDCARD .
+ls -l $ARCHIVE_DIR/$archive_name

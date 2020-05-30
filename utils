@@ -1,0 +1,7 @@
+
+ARCHIVE_DIR=/data/dslr-dumps
+SDCARD=/media/EOS_DIGITAL
+
+mount_sdcard() {
+  findmnt $SDCARD >/dev/null || mount $SDCARD
+}
